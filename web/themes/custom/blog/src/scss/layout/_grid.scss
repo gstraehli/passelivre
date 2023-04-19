@@ -1,0 +1,18 @@
+.container {
+    max-width: 83rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.wrapper-jcsb {
+  display: flex;
+  justify-content: space-between;
+}

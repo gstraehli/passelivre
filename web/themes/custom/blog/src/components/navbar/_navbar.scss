@@ -1,0 +1,35 @@
+@import "../../scss/init";
+
+.navbar {
+  .form-inline {
+    .form-actions {
+      display: none;
+    }
+  }
+  > .container {
+    justify-content: center!important;
+  }
+  .nav-link {
+    font-family: var(--font-family-heading);
+    color: var(--c1-500);
+    text-decoration: none;
+  }
+}
+.navbar-expand-lg  {
+  .navbar-collapse {
+    flex-grow: inherit;
+    flex-basis: inherit;
+
+  }
+}
+
+.toolbar-oriented .toolbar-bar {
+  z-index: 1200;
+}
+.toolbar-horizontal {
+  .toolbar-menu {
+    &.nav {
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.node--view-mode-teaser {
+  position: relative;
+  transition: .35s ease-in-out;
+  border-radius: 2rem;
+
+  .img-wrapper {
+    position: relative;
+    .field--name-field-tags {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      a {
+        background-color: var(--blue-uidarker);
+      }
+    }
+  }
+  .field--name-field-image {
+    height: 16rem;
+    background: var(--blue-uidarker);
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2rem;
+      transition: .35s ease-in-out;
+    }
+  }
+
+  .content-wrapper {
+    background-color: var(--blue-uidarker);
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding: 2.5rem 1rem 4rem;
+    min-height: 19rem;
+    .field--name-node-title {
+      a {
+        text-decoration: none;
+        color: var(--c1-500);
+        cursor: pointer;
+      }
+    }
+    .field--name-field-introduction {
+      font-size: var(--small);
+      color: var(--gray-secondary);
+    }
+    .placeholder {
+      min-height: 7rem;
+    }
+  }
+  .content-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    padding: 0 1rem;
+    width: 100%;
+  }
+  .field--name-node-post-date {
+    font-size: var(--small);
+    color: var(--blue-ui);
+
+  }
+  .field--name-node-author {
+    font-size: var(--small);
+    color: var(--gray-secondary);
+  }
+  .field--name-node-link {
+    text-align: right;
+  }
+  .readmore-link {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover,
+  &:active {
+    box-shadow: 0 0 36px -8px var(--pink);
+    transition: .35s ease-in-out;
+
+    .img-wrapper {
+      img {
+        transition: .35s ease-in-out;
+      }
+    }
+  }
+}

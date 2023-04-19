@@ -1,0 +1,39 @@
+.node--type-article {
+  &.node--view-mode-full {
+    border-radius: 2rem;
+    padding: 4rem 2rem 3rem;
+    background-color: var(--blue-uidarker);
+    .article-image-wrapper {
+      .img-wrapper {
+        margin-bottom: 1rem;
+      }
+    }
+    .article-book-information {
+      display: flex;
+      gap: 1rem;
+    }
+    .top-title {
+      h2 {
+        margin-bottom: 1rem;
+      }
+      .metadata {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+    .top-content {
+      margin: 2rem 0 2rem;
+    }
+    .field--name-field-introduction {
+      .field__label {
+        font-family: var(--font-family-heading);
+        font-size: var(--s3);
+        margin-bottom: 1rem;
+      }
+    }
+    .content-wrapper {
+      padding: 0 10rem;
+    }
+  }
+}

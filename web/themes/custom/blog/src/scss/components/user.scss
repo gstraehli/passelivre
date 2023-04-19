@@ -1,0 +1,20 @@
+.user--compact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  p {
+    margin: 0;
+  }
+  .field--name-user-picture {
+    a {
+      pointer-events: none;
+    }
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      border: 1px solid var(--blue-uidark);
+      box-shadow: 0 0 10px 2px var(--blue-secondary);
+    }
+  }
+}

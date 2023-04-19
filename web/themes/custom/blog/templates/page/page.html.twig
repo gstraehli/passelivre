@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+{% set page_classes = [
+  'py-5'
+]|merge(page_utility_classes ? page_utility_classes : []) %}
+
+<div class="page">
+  {% if page.header %}
+    <header class="page__header">
+      <div class="container">
+        <div class="header-wrapper">
+          {{ page.header }}
+          {% embed '@blog/navbar/navbar.twig' with {
+            container: 'fixed',
+            color: 'light',
+          } %}
+
+            {% block branding %}
+              {% if page.navbar_branding %}
+                {{ page.navbar_branding }}
+              {% endif %}
+            {% endblock %}
+          {% endembed %}
+        </div>
+      </div>
+    </header>
+  {% endif %}
+
+  {{ page.precontent }}
+
+  <main{{ content_attributes.addClass(page_classes) }}>
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+
+    {% if page.content %}
+      <div class="page__content">
+        <div class="container">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
+  </main>
+
+  {% if page.footer %}
+    <footer class="page__footer">
+      <div class="container">
+        <div class="d-flex justify-content-md-between align-items-md-center">
+          {{ page.footer }}
+        </div>
+      </div>
+    </footer>
+  {% endif %}
+</div>

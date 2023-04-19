@@ -1,0 +1,14 @@
+.field--label-inline {
+  display: flex;
+  gap: .75rem;
+  .field__label {
+    position: relative;
+    &:after {
+      content: ':';
+      position: absolute;
+      right: -.45rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

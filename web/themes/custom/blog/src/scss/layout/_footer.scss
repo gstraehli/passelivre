@@ -1,0 +1,10 @@
+.page__footer {
+  background-color: var(--blue-uidarker);
+  margin-top: 3rem;
+  padding: 4rem 0 5rem;
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}

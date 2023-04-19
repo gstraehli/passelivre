@@ -1,0 +1,26 @@
+@mixin tag-format {
+  font-size: var(--small);
+  text-decoration: none;
+  border-radius: 2rem;
+  padding: .5rem 1rem;
+}
+
+.field--name-field-tags {
+  .field__item {
+    @include tag-format;
+    color: var(--blue-secondary);
+    background-color: var(--blue-uidark);
+  }
+}
+
+.tag-label {
+  display: flex;
+  gap: 1rem;
+  p,
+  .field--type-string,
+  .field--type-entity-reference {
+    @include tag-format;
+    color: var(--pink);
+    background-color: var(--blue-uidark);
+  }
+}
