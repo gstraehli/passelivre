@@ -2,9 +2,17 @@
   background-color: var(--blue-uidarker);
   margin-top: 3rem;
   padding: 4rem 0 5rem;
+  .wrapper-footer {
+    display: flex;
+    justify-content: space-between;
+    @include media-breakpoint-down(md) {}
+  }
   .navbar-nav {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
   }
 }

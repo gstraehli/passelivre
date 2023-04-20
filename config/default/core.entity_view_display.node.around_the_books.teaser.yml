@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.around_the_books.body
     - field.field.node.around_the_books.field_image
     - field.field.node.around_the_books.field_introduction
+    - image.style.large
     - node.type.around_the_books
   module:
     - ds
@@ -34,20 +35,29 @@ third_party_settings:
       ds_content:
         - field_image
         - field_introduction
-        - links
         - node_post_date
+        - node_title
         - user
         - node_link
-        - body
     fields:
       user:
         plugin_id: user
         weight: 4
         label: hidden
         formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 3
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          'link class': ''
+          wrapper: h3
+          class: ''
       node_post_date:
         plugin_id: node_post_date
-        weight: 3
+        weight: 2
         label: hidden
         formatter: ds_post_date_long
       node_link:
@@ -57,7 +67,7 @@ third_party_settings:
         formatter: default
         settings:
           'link text': "Lire l'article"
-          'link class': ''
+          'link class': readmore-link
           wrapper: ''
           class: ''
 id: node.around_the_books.teaser
@@ -65,19 +75,14 @@ targetEntityType: node
 bundle: around_the_books
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
-    label: hidden
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    weight: 6
-    region: ds_content
   field_image:
-    type: image_url
+    type: image
     label: hidden
     settings:
-      image_style: ''
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: ds_content
@@ -89,9 +94,6 @@ content:
     third_party_settings: {  }
     weight: 1
     region: ds_content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: ds_content
-hidden: {  }
+hidden:
+  body: true
+  links: true

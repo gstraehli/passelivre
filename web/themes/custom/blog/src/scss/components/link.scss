@@ -5,6 +5,9 @@
   font-size: 1.15rem;
   text-decoration: none;
   transition: .35s ease-in-out;
+  &.is-active {
+    color: var(--pink);
+  }
   &:after {
     content: '';
     position: absolute;
