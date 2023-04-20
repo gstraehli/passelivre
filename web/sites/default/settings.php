@@ -761,7 +761,7 @@ if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 
   include __DIR__ . '/settings.ddev.php';
 }
 
-$host = "db";
+$host = "mysql";
 $port = 3306;
 $driver = "mysql";
 
@@ -769,7 +769,7 @@ $settings['config_sync_directory'] = '../config/default';
 
 $databases['default']['default'] = array(
   'database' => "kjwt0921_db",
-  'username' => "kjwt0921_gstraehli",
+  'username' => "kjwt0921",
   'password' => "goupil67",
   'host' => $host,
   'driver' => $driver,
