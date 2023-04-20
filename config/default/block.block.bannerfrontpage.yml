@@ -1,0 +1,30 @@
+uuid: b4b253fa-cde6-4a6d-8399-af714c201352
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner_block:bb90dadf-e897-4f48-a9ba-152221e44cc4'
+  module:
+    - block_content
+    - system
+  theme:
+    - blog
+id: bannerfrontpage
+theme: blog
+region: precontent
+weight: -8
+provider: null
+plugin: 'block_content:bb90dadf-e897-4f48-a9ba-152221e44cc4'
+settings:
+  id: 'block_content:bb90dadf-e897-4f48-a9ba-152221e44cc4'
+  label: 'Banner front page'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /front

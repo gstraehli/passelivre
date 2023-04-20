@@ -1,0 +1,127 @@
+uuid: b93e63e9-e3e0-4653-82e1-4ec117434d75
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_book_author
+    - field.field.node.article.field_edition
+    - field.field.node.article.field_image
+    - field.field.node.article.field_introduction
+    - field.field.node.article.field_tags
+    - image.style.large
+    - node.type.article
+  module:
+    - ds
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - node_title
+        - field_image
+        - field_tags
+        - field_introduction
+        - node_post_date
+        - user
+        - field_book_author
+        - node_link
+    fields:
+      user:
+        plugin_id: user
+        weight: 5
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          'link class': ''
+          wrapper: h3
+          class: ''
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 4
+        label: hidden
+        formatter: ds_post_date_olivero_medium
+      node_link:
+        plugin_id: node_link
+        weight: 7
+        label: hidden
+        formatter: default
+        settings:
+          'link text': "Lire l'article"
+          'link class': readmore-link
+          wrapper: ''
+          class: ''
+_core:
+  default_config_hash: 83jX5ChAGdMzOxiDA_B1NjgebVMuD8lNVDgClg_QVP8
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  field_book_author:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: ds_content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  field_introduction:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    weight: 3
+    region: ds_content
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    weight: 2
+    region: ds_content
+hidden:
+  body: true
+  comment: true
+  field_edition: true
+  links: true

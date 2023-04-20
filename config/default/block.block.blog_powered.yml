@@ -1,0 +1,22 @@
+uuid: a492e996-45d8-43ec-bf8b-e278b9cfc93b
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - blog
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: blog_powered
+theme: blog
+region: navbar_branding
+weight: 2
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

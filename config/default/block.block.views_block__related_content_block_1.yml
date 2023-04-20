@@ -1,0 +1,29 @@
+uuid: c69fe30d-b289-4a1b-9142-3e45559af7f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.related_content
+  module:
+    - system
+    - views
+  theme:
+    - blog
+id: views_block__related_content_block_1
+theme: blog
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:related_content-block_1'
+settings:
+  id: 'views_block:related_content-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/lectures/*'

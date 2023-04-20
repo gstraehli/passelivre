@@ -1,0 +1,22 @@
+uuid: b2fec943-ea91-47d7-9031-4e9226005ccc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: lectures
+label: lectures
+type: 'canonical_entities:node'
+pattern: 'lectures/[node:title]'
+selection_criteria:
+  de8ae479-0433-4a17-8bb4-67c42b9bf91c:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: de8ae479-0433-4a17-8bb4-67c42b9bf91c
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+selection_logic: and
+weight: -5
+relationships: {  }
