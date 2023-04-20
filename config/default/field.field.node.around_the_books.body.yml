@@ -1,0 +1,23 @@
+uuid: 6c848f55-c9de-4c0e-8c01-e2ee5f49587c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.around_the_books
+  module:
+    - text
+id: node.around_the_books.body
+field_name: body
+entity_type: node
+bundle: around_the_books
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

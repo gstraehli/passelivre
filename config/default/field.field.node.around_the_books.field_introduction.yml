@@ -1,0 +1,21 @@
+uuid: 9175239d-c69b-4f3a-9b1a-3ca6a1d840aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_introduction
+    - node.type.around_the_books
+  module:
+    - text
+id: node.around_the_books.field_introduction
+field_name: field_introduction
+entity_type: node
+bundle: around_the_books
+label: Introduction
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

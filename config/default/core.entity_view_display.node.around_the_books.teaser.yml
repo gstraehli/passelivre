@@ -1,0 +1,97 @@
+uuid: 0945b7f6-4607-4d70-ad8f-007d48b8a0a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.around_the_books.body
+    - field.field.node.around_the_books.field_image
+    - field.field.node.around_the_books.field_introduction
+    - node.type.around_the_books
+  module:
+    - ds
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - field_image
+        - field_introduction
+        - links
+        - node_post_date
+        - user
+        - node_link
+        - body
+    fields:
+      user:
+        plugin_id: user
+        weight: 4
+        label: hidden
+        formatter: default
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 3
+        label: hidden
+        formatter: ds_post_date_long
+      node_link:
+        plugin_id: node_link
+        weight: 5
+        label: hidden
+        formatter: default
+        settings:
+          'link text': "Lire l'article"
+          'link class': ''
+          wrapper: ''
+          class: ''
+id: node.around_the_books.teaser
+targetEntityType: node
+bundle: around_the_books
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 6
+    region: ds_content
+  field_image:
+    type: image_url
+    label: hidden
+    settings:
+      image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: ds_content
+  field_introduction:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: ds_content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: ds_content
+hidden: {  }
