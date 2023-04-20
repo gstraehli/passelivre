@@ -3,12 +3,13 @@
 :root {
   --black: #191919;
   --white: #FFFFFF;
-  --blue-darker: #0b121d;
+  --blue-darker: #131139;
   --blue-ui: #445071;
   --blue-uidark: #333c52;
   --blue-uidarker: #171c28;
   --blue-secondary: #8a97e9;
   --gray-secondary: #6e6e73;
+  --purple: #46226a;
   --pink: #eb83ca;
   --green: #a2fc78;
   --orange: #fc8b05;

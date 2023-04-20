@@ -7,12 +7,13 @@
 :root {
   --black: #191919;
   --white: #FFFFFF;
-  --blue-darker: #0b121d;
+  --blue-darker: #131139;
   --blue-ui: #445071;
   --blue-uidark: #333c52;
   --blue-uidarker: #171c28;
   --blue-secondary: #8a97e9;
   --gray-secondary: #6e6e73;
+  --purple: #46226a;
   --pink: #eb83ca;
   --green: #a2fc78;
   --orange: #fc8b05;
@@ -6332,12 +6333,13 @@ a:hover, a:active {
 :root {
   --black: #191919;
   --white: #FFFFFF;
-  --blue-darker: #0b121d;
+  --blue-darker: #131139;
   --blue-ui: #445071;
   --blue-uidark: #333c52;
   --blue-uidarker: #171c28;
   --blue-secondary: #8a97e9;
   --gray-secondary: #6e6e73;
+  --purple: #46226a;
   --pink: #eb83ca;
   --green: #a2fc78;
   --orange: #fc8b05;
@@ -6419,7 +6421,8 @@ a:hover, a:active {
 }
 
 .page__header {
-  margin: 2rem 0;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .header-wrapper {
@@ -6436,6 +6439,37 @@ a:hover, a:active {
 .navbar {
   display: flex;
   justify-content: center;
+}
+
+.overflow-background {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.overflow-background:after {
+  content: "";
+  position: absolute;
+  top: -50rem;
+  left: -48rem;
+  width: 87rem;
+  height: 87rem;
+  background: var(--purple);
+  box-shadow: inset 0 0 30rem 12rem var(--blue-darker);
+  border-radius: 50%;
+}
+.overflow-background:before {
+  content: "";
+  position: absolute;
+  bottom: -50rem;
+  right: -48rem;
+  width: 74rem;
+  height: 87rem;
+  background: var(--purple);
+  box-shadow: inset 0 0 30rem 12rem var(--blue-darker);
+  border-radius: 50%;
 }
 
 .page__footer {
