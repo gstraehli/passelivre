@@ -761,8 +761,21 @@ if (file_exists(__DIR__ . '/settings.ddev.php') && getenv('IS_DDEV_PROJECT') == 
   include __DIR__ . '/settings.ddev.php';
 }
 
+$host = "db";
+$port = 3306;
+$driver = "mysql";
+
 $settings['config_sync_directory'] = '../config/default';
 
+$databases['default']['default'] = array(
+  'database' => "kjwt0921_db",
+  'username' => "kjwt0921_gstraehli",
+  'password' => "goupil67",
+  'host' => $host,
+  'driver' => $driver,
+  'port' => $port,
+  'prefix' => "",
+);
 /**
  * Load local development override configuration, if available.
  *
