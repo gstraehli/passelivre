@@ -6,3 +6,19 @@
   position: relative;
   left: calc(-1 * (100vw - 100%) /2);
 }
+
+@mixin border-gradient-pink-blue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2rem;
+  border: 2px solid transparent;
+  background: linear-gradient(99deg, rgba(169,80,198,1) 0%, rgba(71,163,174,1) 100%) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}

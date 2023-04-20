@@ -1,8 +1,8 @@
 .nav-link {
   display: block;
   position: relative;
-  font-family: var(--font-family-heading);
   color: var(--white);
+  font-size: 1.15rem;
   text-decoration: none;
   transition: .35s ease-in-out;
   &:after {
@@ -24,6 +24,7 @@
   &:hover,
   &:active {
     transition: .35s ease-in-out;
+    color: var(--white);
     &:after {
       opacity: 1;
       bottom: 10px;
@@ -31,8 +32,4 @@
     }
   }
 }
-.readmore-link {
-  text-decoration: none;
-  color: var(--blue-secondary);
-  cursor: pointer;
-}
+
