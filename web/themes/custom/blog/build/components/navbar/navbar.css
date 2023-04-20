@@ -4,15 +4,16 @@
   --black: #191919;
   --white: #FFFFFF;
   --blue-darker: #131139;
-  --blue-ui: #445071;
-  --blue-uidark: #333c52;
+  --blue-ui: #888fa1;
+  --blue-uidark: #484067;
   --blue-uidarker: #171c28;
   --blue-secondary: #8a97e9;
-  --gray-secondary: #6e6e73;
+  --gray-secondary: #9090d2;
   --purple: #46226a;
   --pink: #eb83ca;
   --green: #a2fc78;
   --orange: #fc8b05;
+  --gradient-card: linear-gradient(200deg, rgba(85,55,119,1) 0%, rgba(46,39,80,1) 100%);
   --font-family-base: "Lato", sans-serif;
   --font-family-heading: "Libre Baskerville", sans-serif;
   --s1: 2.5rem;
@@ -30,11 +31,6 @@
 }
 .navbar > .container {
   justify-content: center !important;
-}
-.navbar .nav-link {
-  font-family: var(--font-family-heading);
-  color: var(--c1-500);
-  text-decoration: none;
 }
 
 .navbar-expand-lg .navbar-collapse {
