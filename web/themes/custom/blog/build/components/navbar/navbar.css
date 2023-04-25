@@ -10,10 +10,13 @@
   --blue-secondary: #8a97e9;
   --gray-secondary: #9090d2;
   --purple: #46226a;
+  --purple-neon: #e558ff;
+  --turquoise-neon: #35ddce;
   --pink: #eb83ca;
   --green: #a2fc78;
   --orange: #fc8b05;
   --gradient-card: linear-gradient(200deg, rgba(85,55,119,1) 0%, rgba(46,39,80,1) 100%);
+  --article-bg: linear-gradient(130deg, #121828 0%, #3a2350 100%);
   --font-family-base: "Lato", sans-serif;
   --font-family-heading: "Libre Baskerville", sans-serif;
   --s1: 2.5rem;

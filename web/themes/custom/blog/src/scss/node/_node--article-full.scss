@@ -3,7 +3,10 @@
   &.node--view-mode-full {
     border-radius: 2rem;
     padding: 4rem 2rem 3rem;
-    background-color: var(--blue-uidarker);
+    background: var(--article-bg);
+    @include media-breakpoint-down(md) {
+      padding: 2rem 1rem;
+    }
     .article-image-wrapper {
       .img-wrapper {
         margin-bottom: 1rem;
@@ -22,9 +25,33 @@
         align-items: center;
         gap: 1rem;
       }
+      .wrapper-jcsb {
+        @include media-breakpoint-down(md) {
+          flex-direction: column;
+        }
+      }
+    }
+    .field--name-field-tags {
+      display: flex;
+      @include media-breakpoint-down(md) {
+        margin-bottom: 2rem;
+      }
     }
     .top-content {
       margin: 2rem 0 2rem;
+      .row {
+        @include media-breakpoint-down(md) {
+          flex-direction: column;
+        }
+      }
+    }
+    .field--name-field-image {
+      img {
+        @include media-breakpoint-down(md) {
+          width: 100%;
+          height: auto;
+        }
+      }
     }
     .field--name-field-introduction {
       .field__label {
@@ -35,6 +62,9 @@
     }
     .content-wrapper {
       padding: 0 10rem;
+      @include media-breakpoint-down(md) {
+        padding: 0;
+      }
     }
   }
 }

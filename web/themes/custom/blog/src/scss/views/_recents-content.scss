@@ -1,13 +1,13 @@
 .block--views-block--related-content-block-1 {
   margin: 3rem 0;
-  }
+}
 
 .block--views-block--content-recent-block-1 {
   ul {
     li {
-        &:nth-child(4) {
-          display: none;
-        }
+      &:nth-child(4) {
+        display: none;
       }
     }
+  }
 }

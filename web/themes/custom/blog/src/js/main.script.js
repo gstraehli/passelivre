@@ -1,13 +1,14 @@
-import { Toast, Tooltip } from './_bootstrap';
-
 (function () {
-	// * Tooltip initialization, remove it if not necessary
-	document
-		.querySelectorAll('[data-toggle="tooltip"]')
-		.forEach((tooltipElement) => new Tooltip(tooltipElement));
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  navbarToggler.addEventListener('click', (e) => {
+    const navigationWrapper = document.querySelector('.block--blog-main-menu');
+    if(navigationWrapper.classList.contains('is-open')) {
+      navigationWrapper.classList.remove('is-open');
+      navigationWrapper.style.right = -100 + '%';
+    } else {
+      navigationWrapper.classList.add('is-open');
+      navigationWrapper.style.right = 0;
+    }
 
-	// * Toast initialization, remove it if not necessary
-	document
-		.querySelectorAll('.toast')
-		.forEach((toastElement) => new Toast(toastElement));
+  })
 })();

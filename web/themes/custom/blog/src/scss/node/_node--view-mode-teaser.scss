@@ -10,6 +10,9 @@
       position: absolute;
       top: 1rem;
       right: 1rem;
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
       a {
         background-color: var(--blue-uidarker);
       }
@@ -101,7 +104,7 @@
     .readmore-link {
       background: linear-gradient(99deg, rgba(169,80,198,1) 0%, rgba(71,163,174,1) 100%);
       transition: .25s ease-in-out;
-      color: var(--blue-uidarker);
+      color: var(--white);
     }
     .img-wrapper {
       img {
