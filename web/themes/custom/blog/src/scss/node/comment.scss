@@ -1,0 +1,99 @@
+.section-comments {
+  article {
+    &:nth-child(odd) {
+      &:before {
+        background-color: rgba(0,0,0,.2);
+      }
+    }
+    &:nth-child(even) {
+      &:before {
+        background-color: rgba(255,255,255,.05);
+      }
+    }
+  }
+  .notyet {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    p {
+      font-size: 1.25rem;
+    }
+  }
+}
+.card-comment {
+  position: relative;
+  padding: 2rem 1rem 2.5rem;
+  z-index: 1;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .links {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: .75rem;
+    a {
+      display: block;
+      font-size: var(--small);
+      color: var(--white);
+      margin-bottom: .25rem;
+    }
+  }
+  .picture-wrapper {
+    flex: 1;
+  }
+  .info-wrapper {
+    flex: 5;
+    padding-right: 7rem;
+  }
+  .comment-meta {
+    font-size: var(--small);
+  }
+}
+
+.comment-section {
+  margin-top: 4rem;
+  .comment-comment-form {
+    .form-label {
+      display: none;
+    }
+    .field--name-comment-body {
+      color: var(--black);
+      .ck-content {
+        min-height: 9rem;
+      }
+    }
+    .js-filter-wrapper {
+      display: none;
+    }
+  }
+  .form-actions {
+    display: flex;
+    gap: .5rem;
+    margin-top: 1.5rem;
+    #edit-preview {
+      display: none;
+    }
+    .form-submit {
+      appearance: none;
+      padding: .5rem .75rem;
+      border-radius: .75rem;
+      border: 0;
+      &.button--primary {
+        color: var(--white);
+        background: linear-gradient(99deg, rgba(169,80,198,1) 0%, rgba(71,163,174,1) 100%) border-box;
+      }
+    }
+  }
+
+}

@@ -13,7 +13,9 @@
     <header class="page__header">
       <div class="container">
         <div class="header-wrapper">
-          {{ page.header }}
+          <h1 class="sitename">
+            <a href="/" title="La passe-livre">La passe-livre</a>
+          </h1>
           {% embed '@blog/navbar/navbar.twig' with {
             container: 'fixed',
             color: 'light',

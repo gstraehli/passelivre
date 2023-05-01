@@ -1,9 +1,11 @@
 .node--type-article,
  .node--type-around-the-books {
   &.node--view-mode-full {
-    border-radius: 2rem;
-    padding: 4rem 2rem 3rem;
-    background: var(--article-bg);
+    .node-wrapper {
+      border-radius: 2rem;
+      padding: 4rem 2rem 3rem;
+      background: var(--article-bg);
+    }
     @include media-breakpoint-down(md) {
       padding: 2rem 1rem;
     }
@@ -67,4 +69,11 @@
       }
     }
   }
+}
+
+.comments-wrapper {
+  margin-top: 2rem;
+  border-radius: 2rem;
+  padding: 4rem 2rem 3rem;
+  background: var(--article-bg);
 }

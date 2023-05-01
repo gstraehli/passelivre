@@ -10,40 +10,48 @@
  */
 #}
 <{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix') }}>
+  <div class="node-wrapper">
 
-  {{ title_suffix.contextual_links }}
-  <div class="top-title">
-    <div class="wrapper-jcsb">
-      {{ ds_content.node_title }}
-      {{ ds_content.field_tags }}
-    </div>
+    {{ title_suffix.contextual_links }}
+    <div class="top-title">
+      <div class="wrapper-jcsb">
+        {{ ds_content.node_title }}
+        {{ ds_content.field_tags }}
+      </div>
 
-    <div class="metadata">
-      {{ ds_content.user }} -
-      {{ ds_content.node_post_date }}
+      <div class="metadata">
+        {{ ds_content.user }} -
+        {{ ds_content.node_post_date }}
+      </div>
     </div>
-  </div>
-  <div class="top-content">
-    <div class="row">
-      <div class="article-image-wrapper">
-        <div class="img-wrapper">
-          {{ ds_content.field_image }}
-        </div>
-        <div class="article-book-information">
-          <div class="tag-label">
-            {{ ds_content.field_book_author }}
-            {{ ds_content.field_edition }}
+    <div class="top-content">
+      <div class="row">
+        <div class="article-image-wrapper">
+          <div class="img-wrapper">
+            {{ ds_content.field_image }}
+          </div>
+          <div class="article-book-information">
+            <div class="tag-label">
+              {{ ds_content.field_book_author }}
+              {{ ds_content.field_edition }}
+            </div>
           </div>
         </div>
-      </div>
-      <div class="wrapper">
-        {{ ds_content.field_introduction }}
+        <div class="wrapper">
+          {{ ds_content.field_introduction }}
+        </div>
       </div>
     </div>
+
+    <div class="content-wrapper">
+      {{ ds_content.body }}
+    </div>
+
   </div>
 
-  <div class="content-wrapper">
-    {{ ds_content.body }}
+  <div class="comments-wrapper">
+    <h3>Commentaires</h3>
+    {{ ds_content.comment }}
   </div>
 
 </{{ ds_content_wrapper }}>

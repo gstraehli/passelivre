@@ -4,16 +4,24 @@
  * Template for the comment field.
  */
 #}
-<section{{ attributes }}>
+<section class="section-comments">
   {{ title_prefix }}
   {{ title_suffix }}
 
-  {{ comments }}
+  {% if comments %}
+    {{ comments }}
+  {% else %}
+  <div class="notyet">
+    <p>Envie d'échanger sur cette article ? N'hésitez pas !</p>
+  </div>
+  {% endif %}
+
+
 
   {% if comment_form %}
     <div class="card comment-section">
       <div class="card-header">
-        {{ 'Add new comment'|t }}
+        <p>Rédiger un commentaire</p>
       </div>
       <div class="card-body">
         {{ comment_form }}

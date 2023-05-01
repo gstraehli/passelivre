@@ -1,0 +1,32 @@
+.canvas {
+  position: relative;
+  display: flex;
+  height: 34rem;
+  svg {
+    height: 30rem;
+    fill: url(#gradient-vertical) gray;
+  }
+  h2 {
+    position: absolute;
+    right: 40%;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+  }
+  .svg-wrapper {
+    position: absolute;
+    right: 10%;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -3rem;
+      left: 10%;
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      background-color: var(--blue-darker);
+      z-index: -1;
+      box-shadow: 0 0 3px 0 var(--purple);
+    }
+  }
+}

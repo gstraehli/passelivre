@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Template for a Block component.
+ *
+ * Available config:
+ * - html_tag: The HTML tag for the block.
+ * - utility_classes: An array of utility classes.
+ */
+#}
+{% set classes = [
+  'block',
+  bundle ? 'block--' ~ bundle|clean_class,
+  id ? 'block--' ~ id|replace({"_": "-"})|clean_class,
+]|merge(utility_classes ? utility_classes : []) %}
+
+<div class="canvas">
+  <h2>La passe-livre</h2>
+  <div class="svg-wrapper">
+    {% include 'themes/custom/blog/src/assets/images/hare.svg' %}
+  </div>
+</div>
