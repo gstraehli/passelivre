@@ -24,7 +24,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Les dernières publications'
+      title: 'Les dernières lectures'
       fields:
         title:
           id: title

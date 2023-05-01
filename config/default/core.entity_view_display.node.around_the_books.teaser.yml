@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.around_the_books.body
+    - field.field.node.around_the_books.comment
     - field.field.node.around_the_books.field_image
     - field.field.node.around_the_books.field_introduction
     - image.style.large
@@ -96,4 +97,5 @@ content:
     region: ds_content
 hidden:
   body: true
+  comment: true
   links: true

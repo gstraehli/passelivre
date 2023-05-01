@@ -134,7 +134,7 @@ display:
             node: true
             limit: false
             vids: {  }
-            anyall: ','
+            anyall: +
           default_argument_skip_url: false
           summary_options:
             base_path: ''

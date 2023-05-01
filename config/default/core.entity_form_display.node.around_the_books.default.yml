@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.around_the_books.body
+    - field.field.node.around_the_books.comment
     - field.field.node.around_the_books.field_image
     - field.field.node.around_the_books.field_introduction
     - image.style.thumbnail
     - node.type.around_the_books
   module:
+    - comment
     - image
     - path
     - text
@@ -26,6 +28,12 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  comment:
+    type: comment_default
+    weight: 124
+    region: content
+    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

@@ -1,15 +1,19 @@
-uuid: dc1f3662-84a1-4c1a-8f21-d0c3bd344f68
+uuid: 2c2aeab4-d7d2-4ba1-82b4-e2be5360e2cd
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_display.comment.comment.default
-    - field.field.node.around_the_books.body
-    - field.field.node.around_the_books.comment
-    - field.field.node.around_the_books.field_image
-    - field.field.node.around_the_books.field_introduction
+    - core.entity_view_mode.node.highlight
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_book_author
+    - field.field.node.article.field_edition
+    - field.field.node.article.field_image
+    - field.field.node.article.field_introduction
+    - field.field.node.article.field_tags
     - image.style.large
-    - node.type.around_the_books
+    - node.type.article
   module:
     - comment
     - ds
@@ -35,46 +39,46 @@ third_party_settings:
         label: ''
     regions:
       ds_content:
-        - body
         - field_image
-        - field_introduction
+        - field_tags
+        - body
+        - node_title
+        - links
         - comment
+        - field_introduction
+        - field_edition
         - user
         - node_post_date
-        - node_title
-        - node_author
+        - field_book_author
     fields:
       user:
         plugin_id: user
-        weight: 3
+        weight: 8
         label: hidden
         formatter: default
       node_title:
         plugin_id: node_title
-        weight: 5
+        weight: 3
         label: hidden
         formatter: default
       node_post_date:
         plugin_id: node_post_date
-        weight: 4
+        weight: 9
         label: hidden
         formatter: ds_post_date_olivero_medium
-      node_author:
-        plugin_id: node_author
-        weight: 6
-        label: hidden
-        formatter: author
-id: node.around_the_books.default
+_core:
+  default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
+id: node.article.highlight
 targetEntityType: node
-bundle: around_the_books
-mode: default
+bundle: article
+mode: highlight
 content:
   body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 2
     region: ds_content
   comment:
     type: comment_default
@@ -83,7 +87,23 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 3
+    weight: 5
+    region: ds_content
+  field_book_author:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 11
+    region: ds_content
+  field_edition:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
     region: ds_content
   field_image:
     type: image
@@ -94,14 +114,28 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: ds_content
   field_introduction:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 6
     region: ds_content
-hidden:
-  links: true
+  field_tags:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    weight: 1
+    region: ds_content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: ds_content
+hidden: {  }
