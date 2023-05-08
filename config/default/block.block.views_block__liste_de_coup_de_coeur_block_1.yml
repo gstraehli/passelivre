@@ -1,27 +1,27 @@
-uuid: e09f78f5-bbc6-4b47-acb1-ece89248ee2e
+uuid: 264ee149-ebf3-4c8a-a5d9-a445167ed267
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.content_recent
+    - views.view.liste_de_coup_de_coeur
   module:
     - system
     - views
   theme:
     - blog
-id: views_block__content_recent_block_1
+id: views_block__liste_de_coup_de_coeur_block_1
 theme: blog
 region: content
-weight: -9
+weight: -10
 provider: null
-plugin: 'views_block:content_recent-block_1'
+plugin: 'views_block:liste_de_coup_de_coeur-block_1'
 settings:
-  id: 'views_block:content_recent-block_1'
+  id: 'views_block:liste_de_coup_de_coeur-block_1'
   label: ''
   label_display: visible
   provider: views
   views_label: ''
-  items_per_page: '4'
+  items_per_page: none
 visibility:
   request_path:
     id: request_path

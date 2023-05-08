@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.around_the_books.comment
     - field.field.node.around_the_books.field_image
     - field.field.node.around_the_books.field_introduction
-    - image.style.large
+    - image.style.xlarge_820x820_
     - node.type.around_the_books
   module:
     - ds
@@ -81,7 +81,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: large
+      image_style: xlarge_820x820_
       image_loading:
         attribute: lazy
     third_party_settings: {  }

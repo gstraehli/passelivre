@@ -1,0 +1,23 @@
+uuid: e61f5d98-6390-43c8-8fda-cce8e0e935e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_favorite
+    - node.type.article
+id: node.article.field_favorite
+field_name: field_favorite
+entity_type: node
+bundle: article
+label: 'Coup de coeur'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

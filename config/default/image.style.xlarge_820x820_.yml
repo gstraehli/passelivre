@@ -1,0 +1,15 @@
+uuid: e9636490-40b8-45f1-b0fe-feca90205cbb
+langcode: en
+status: true
+dependencies: {  }
+name: xlarge_820x820_
+label: 'Xlarge (820x820)'
+effects:
+  e87c129f-54ee-435f-83a4-0e9944e9007c:
+    uuid: e87c129f-54ee-435f-83a4-0e9944e9007c
+    id: image_scale
+    weight: 1
+    data:
+      width: 820
+      height: 820
+      upscale: false

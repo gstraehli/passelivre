@@ -8,10 +8,11 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_book_author
     - field.field.node.article.field_edition
+    - field.field.node.article.field_favorite
     - field.field.node.article.field_image
     - field.field.node.article.field_introduction
     - field.field.node.article.field_tags
-    - image.style.large
+    - image.style.xlarge_820x820_
     - node.type.article
   module:
     - ds
@@ -96,7 +97,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: large
+      image_style: xlarge_820x820_
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -124,4 +125,5 @@ hidden:
   body: true
   comment: true
   field_edition: true
+  field_favorite: true
   links: true

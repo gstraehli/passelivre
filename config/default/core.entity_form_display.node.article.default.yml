@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_book_author
     - field.field.node.article.field_edition
+    - field.field.node.article.field_favorite
     - field.field.node.article.field_image
     - field.field.node.article.field_introduction
     - field.field.node.article.field_tags
@@ -63,6 +64,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_favorite:
+    type: boolean_checkbox
+    weight: 125
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_image:
     type: image_image

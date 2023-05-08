@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_book_author
     - field.field.node.article.field_edition
+    - field.field.node.article.field_favorite
     - field.field.node.article.field_image
     - field.field.node.article.field_introduction
     - field.field.node.article.field_tags
@@ -138,4 +139,5 @@ content:
     third_party_settings: {  }
     weight: 4
     region: ds_content
-hidden: {  }
+hidden:
+  field_favorite: true

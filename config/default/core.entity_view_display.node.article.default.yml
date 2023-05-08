@@ -8,10 +8,11 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_book_author
     - field.field.node.article.field_edition
+    - field.field.node.article.field_favorite
     - field.field.node.article.field_image
     - field.field.node.article.field_introduction
     - field.field.node.article.field_tags
-    - image.style.large
+    - image.style.xlarge_820x820_
     - node.type.article
   module:
     - comment
@@ -49,6 +50,7 @@ third_party_settings:
         - user
         - node_post_date
         - field_book_author
+        - field_favorite
     fields:
       user:
         plugin_id: user
@@ -104,12 +106,22 @@ content:
     third_party_settings: {  }
     weight: 7
     region: ds_content
+  field_favorite:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 12
+    region: ds_content
   field_image:
     type: image
     label: hidden
     settings:
       image_link: ''
-      image_style: large
+      image_style: xlarge_820x820_
       image_loading:
         attribute: lazy
     third_party_settings: {  }
