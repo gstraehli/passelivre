@@ -1,0 +1,17 @@
+.block--views-block--content-recent-block-1 {
+  margin-top: 6rem;
+  @include media-breakpoint-down(md) {
+    margin-top: 3rem;
+  }
+}
+.view-content-recent {
+  .item-list {
+    ul {
+      li {
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+    }
+  }
+}

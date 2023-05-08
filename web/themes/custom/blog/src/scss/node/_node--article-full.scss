@@ -12,6 +12,10 @@
     .article-image-wrapper {
       .img-wrapper {
         margin-bottom: 1rem;
+        img {
+          max-width: 480px;
+          height: auto;
+        }
       }
     }
     .article-book-information {
