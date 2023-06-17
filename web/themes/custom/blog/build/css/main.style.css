@@ -6849,10 +6849,13 @@ h5 {
 .block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(2) .node--view-mode-teaser .content-wrapper {
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
-  padding: 4rem 1rem 2rem;
+  padding: 2rem 1rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
+}
+.block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(2) .node--view-mode-teaser .content-wrapper .field--name-node-title h3 {
+  margin-bottom: 0;
 }
 .block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(2) .node--view-mode-teaser .content-wrapper .field--name-node-title a {
   text-decoration: none;
@@ -6870,7 +6873,7 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: relative;
   bottom: 1rem;
   left: 0;
   padding: 0 1rem;
@@ -6885,6 +6888,9 @@ h5 {
   color: var(--gray-secondary);
 }
 .block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(2) .node--view-mode-teaser .field--name-node-link {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
   text-align: right;
 }
 .block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(2) .node--view-mode-teaser .readmore-link {
@@ -6974,10 +6980,13 @@ h5 {
 .block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(3) .node--view-mode-teaser .content-wrapper {
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
-  padding: 4rem 1rem 2rem;
+  padding: 2rem 1rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
+}
+.block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(3) .node--view-mode-teaser .content-wrapper .field--name-node-title h3 {
+  margin-bottom: 0;
 }
 .block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(3) .node--view-mode-teaser .content-wrapper .field--name-node-title a {
   text-decoration: none;
@@ -6995,7 +7004,7 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: relative;
   bottom: 1rem;
   left: 0;
   padding: 0 1rem;
@@ -7010,6 +7019,9 @@ h5 {
   color: var(--gray-secondary);
 }
 .block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(3) .node--view-mode-teaser .field--name-node-link {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
   text-align: right;
 }
 .block--views-block--liste-de-coup-de-coeur-block-1 .item-list ul li:nth-child(3) .node--view-mode-teaser .readmore-link {
@@ -7080,6 +7092,7 @@ h5 {
   transition: 0.35s ease-in-out;
   border-radius: 2rem;
   background: var(--gradient-card);
+  overflow: hidden;
 }
 .view-lectures .node--view-mode-teaser .img-wrapper,
 .view-around-the-books .node--view-mode-teaser .img-wrapper,
@@ -7349,10 +7362,10 @@ h5 {
   background: var(--article-bg);
 }
 
-.section-comments article:nth-child(odd):before {
+.section-comments .comment--view-mode-default:nth-child(odd):before {
   background-color: rgba(0, 0, 0, 0.2);
 }
-.section-comments article:nth-child(even):before {
+.section-comments .comment--view-mode-default:nth-child(even):before {
   background-color: rgba(255, 255, 255, 0.05);
 }
 .section-comments .notyet {
@@ -7364,12 +7377,12 @@ h5 {
   font-size: 1.25rem;
 }
 
-.card-comment {
+.comment--view-mode-default {
   position: relative;
   padding: 2rem 1rem 2.5rem;
   z-index: 1;
 }
-.card-comment:before {
+.comment--view-mode-default:before {
   content: "";
   position: absolute;
   left: 0;
@@ -7378,7 +7391,7 @@ h5 {
   height: 100%;
   z-index: -1;
 }
-.card-comment .links {
+.comment--view-mode-default .links {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -7388,28 +7401,39 @@ h5 {
   display: flex;
   gap: 0.75rem;
 }
-.card-comment .links a {
+.comment--view-mode-default .links a {
   display: block;
   font-size: var(--small);
   color: var(--white);
   margin-bottom: 0.25rem;
 }
-.card-comment .picture-wrapper {
-  flex: 1;
+.comment--view-mode-default .field--name-comment-author {
+  margin-bottom: 0.5rem;
 }
-.card-comment .info-wrapper {
-  flex: 5;
-  padding-right: 7rem;
-}
-.card-comment .comment-meta {
+.comment--view-mode-default .field--name-comment-post-date {
+  text-align: right;
+  color: var(--blue-ui);
   font-size: var(--small);
+  margin-bottom: 0.5rem;
 }
 
 .comment-section {
   margin-top: 4rem;
 }
-.comment-section .comment-comment-form .form-label {
-  display: none;
+.comment-section .form-item-name {
+  width: 40%;
+}
+@media (max-width: 767.98px) {
+  .comment-section .form-item-name {
+    width: 100%;
+  }
+}
+.comment-section .js-form-item {
+  display: flex;
+  flex-direction: column;
+}
+.comment-section .js-form-item .form-label {
+  color: var(--white);
 }
 .comment-section .comment-comment-form .field--name-comment-body {
   color: var(--black);

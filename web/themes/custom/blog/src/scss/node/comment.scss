@@ -1,5 +1,5 @@
 .section-comments {
-  article {
+  .comment--view-mode-default {
     &:nth-child(odd) {
       &:before {
         background-color: rgba(0,0,0,.2);
@@ -20,7 +20,7 @@
     }
   }
 }
-.card-comment {
+.comment--view-mode-default {
   position: relative;
   padding: 2rem 1rem 2.5rem;
   z-index: 1;
@@ -49,24 +49,34 @@
       margin-bottom: .25rem;
     }
   }
-  .picture-wrapper {
-    flex: 1;
+  .field--name-comment-author {
+    margin-bottom: .5rem;
   }
-  .info-wrapper {
-    flex: 5;
-    padding-right: 7rem;
-  }
-  .comment-meta {
+  .field--name-comment-post-date {
+    text-align: right;
+    color: var(--blue-ui);
     font-size: var(--small);
+    margin-bottom: .5rem;
   }
 }
 
 .comment-section {
   margin-top: 4rem;
-  .comment-comment-form {
-    .form-label {
-      display: none;
+  .form-item-name {
+    width: 40%;
+    @include media-breakpoint-down(md) {
+      width: 100%;
     }
+  }
+  .js-form-item {
+    display: flex;
+    flex-direction: column;
+    .form-label {
+      color: var(--white);
+    }
+  }
+  .comment-comment-form {
+
     .field--name-comment-body {
       color: var(--black);
       .ck-content {
