@@ -7087,7 +7087,8 @@ h5 {
 .view-lectures .node--view-mode-teaser,
 .view-around-the-books .node--view-mode-teaser,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser,
-.view-content-recent .node--view-mode-teaser {
+.view-content-recent .node--view-mode-teaser,
+.view-related-content .node--view-mode-teaser {
   position: relative;
   transition: 0.35s ease-in-out;
   border-radius: 2rem;
@@ -7097,13 +7098,15 @@ h5 {
 .view-lectures .node--view-mode-teaser .img-wrapper,
 .view-around-the-books .node--view-mode-teaser .img-wrapper,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .img-wrapper,
-.view-content-recent .node--view-mode-teaser .img-wrapper {
+.view-content-recent .node--view-mode-teaser .img-wrapper,
+.view-related-content .node--view-mode-teaser .img-wrapper {
   position: relative;
 }
 .view-lectures .node--view-mode-teaser .img-wrapper .field--name-field-tags,
 .view-around-the-books .node--view-mode-teaser .img-wrapper .field--name-field-tags,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .img-wrapper .field--name-field-tags,
-.view-content-recent .node--view-mode-teaser .img-wrapper .field--name-field-tags {
+.view-content-recent .node--view-mode-teaser .img-wrapper .field--name-field-tags,
+.view-related-content .node--view-mode-teaser .img-wrapper .field--name-field-tags {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -7114,13 +7117,15 @@ h5 {
 .view-lectures .node--view-mode-teaser .img-wrapper .field--name-field-tags a,
 .view-around-the-books .node--view-mode-teaser .img-wrapper .field--name-field-tags a,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .img-wrapper .field--name-field-tags a,
-.view-content-recent .node--view-mode-teaser .img-wrapper .field--name-field-tags a {
+.view-content-recent .node--view-mode-teaser .img-wrapper .field--name-field-tags a,
+.view-related-content .node--view-mode-teaser .img-wrapper .field--name-field-tags a {
   background-color: var(--blue-uidarker);
 }
 .view-lectures .node--view-mode-teaser .field--name-field-image,
 .view-around-the-books .node--view-mode-teaser .field--name-field-image,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .field--name-field-image,
-.view-content-recent .node--view-mode-teaser .field--name-field-image {
+.view-content-recent .node--view-mode-teaser .field--name-field-image,
+.view-related-content .node--view-mode-teaser .field--name-field-image {
   height: 16rem;
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
@@ -7128,7 +7133,8 @@ h5 {
 .view-lectures .node--view-mode-teaser .field--name-field-image img,
 .view-around-the-books .node--view-mode-teaser .field--name-field-image img,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .field--name-field-image img,
-.view-content-recent .node--view-mode-teaser .field--name-field-image img {
+.view-content-recent .node--view-mode-teaser .field--name-field-image img,
+.view-related-content .node--view-mode-teaser .field--name-field-image img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -7139,7 +7145,8 @@ h5 {
 .view-lectures .node--view-mode-teaser .content-wrapper,
 .view-around-the-books .node--view-mode-teaser .content-wrapper,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .content-wrapper,
-.view-content-recent .node--view-mode-teaser .content-wrapper {
+.view-content-recent .node--view-mode-teaser .content-wrapper,
+.view-related-content .node--view-mode-teaser .content-wrapper {
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
   padding: 2.5rem 1rem 4rem;
@@ -7148,7 +7155,8 @@ h5 {
 .view-lectures .node--view-mode-teaser .content-wrapper .field--name-node-title a,
 .view-around-the-books .node--view-mode-teaser .content-wrapper .field--name-node-title a,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .content-wrapper .field--name-node-title a,
-.view-content-recent .node--view-mode-teaser .content-wrapper .field--name-node-title a {
+.view-content-recent .node--view-mode-teaser .content-wrapper .field--name-node-title a,
+.view-related-content .node--view-mode-teaser .content-wrapper .field--name-node-title a {
   text-decoration: none;
   color: var(--c1-500);
   cursor: pointer;
@@ -7156,20 +7164,23 @@ h5 {
 .view-lectures .node--view-mode-teaser .content-wrapper .field--name-field-introduction,
 .view-around-the-books .node--view-mode-teaser .content-wrapper .field--name-field-introduction,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .content-wrapper .field--name-field-introduction,
-.view-content-recent .node--view-mode-teaser .content-wrapper .field--name-field-introduction {
+.view-content-recent .node--view-mode-teaser .content-wrapper .field--name-field-introduction,
+.view-related-content .node--view-mode-teaser .content-wrapper .field--name-field-introduction {
   font-size: var(--small);
   color: var(--gray-secondary);
 }
 .view-lectures .node--view-mode-teaser .content-wrapper .placeholder,
 .view-around-the-books .node--view-mode-teaser .content-wrapper .placeholder,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .content-wrapper .placeholder,
-.view-content-recent .node--view-mode-teaser .content-wrapper .placeholder {
+.view-content-recent .node--view-mode-teaser .content-wrapper .placeholder,
+.view-related-content .node--view-mode-teaser .content-wrapper .placeholder {
   min-height: 7rem;
 }
 .view-lectures .node--view-mode-teaser .content-bottom,
 .view-around-the-books .node--view-mode-teaser .content-bottom,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .content-bottom,
-.view-content-recent .node--view-mode-teaser .content-bottom {
+.view-content-recent .node--view-mode-teaser .content-bottom,
+.view-related-content .node--view-mode-teaser .content-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -7182,27 +7193,31 @@ h5 {
 .view-lectures .node--view-mode-teaser .field--name-node-post-date,
 .view-around-the-books .node--view-mode-teaser .field--name-node-post-date,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .field--name-node-post-date,
-.view-content-recent .node--view-mode-teaser .field--name-node-post-date {
+.view-content-recent .node--view-mode-teaser .field--name-node-post-date,
+.view-related-content .node--view-mode-teaser .field--name-node-post-date {
   font-size: var(--small);
   color: var(--blue-ui);
 }
 .view-lectures .node--view-mode-teaser .field--name-node-author,
 .view-around-the-books .node--view-mode-teaser .field--name-node-author,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .field--name-node-author,
-.view-content-recent .node--view-mode-teaser .field--name-node-author {
+.view-content-recent .node--view-mode-teaser .field--name-node-author,
+.view-related-content .node--view-mode-teaser .field--name-node-author {
   font-size: var(--small);
   color: var(--gray-secondary);
 }
 .view-lectures .node--view-mode-teaser .field--name-node-link,
 .view-around-the-books .node--view-mode-teaser .field--name-node-link,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .field--name-node-link,
-.view-content-recent .node--view-mode-teaser .field--name-node-link {
+.view-content-recent .node--view-mode-teaser .field--name-node-link,
+.view-related-content .node--view-mode-teaser .field--name-node-link {
   text-align: right;
 }
 .view-lectures .node--view-mode-teaser .readmore-link,
 .view-around-the-books .node--view-mode-teaser .readmore-link,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .readmore-link,
-.view-content-recent .node--view-mode-teaser .readmore-link {
+.view-content-recent .node--view-mode-teaser .readmore-link,
+.view-related-content .node--view-mode-teaser .readmore-link {
   background: var(--blue-uidark);
   color: var(--white);
   padding: 0.75rem 1rem;
@@ -7213,7 +7228,8 @@ h5 {
 .view-lectures .node--view-mode-teaser .readmore-link:after,
 .view-around-the-books .node--view-mode-teaser .readmore-link:after,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .readmore-link:after,
-.view-content-recent .node--view-mode-teaser .readmore-link:after {
+.view-content-recent .node--view-mode-teaser .readmore-link:after,
+.view-related-content .node--view-mode-teaser .readmore-link:after {
   content: "";
   position: absolute;
   top: 0;
@@ -7224,7 +7240,8 @@ h5 {
 .view-lectures .node--view-mode-teaser .readmore-link:before,
 .view-around-the-books .node--view-mode-teaser .readmore-link:before,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser .readmore-link:before,
-.view-content-recent .node--view-mode-teaser .readmore-link:before {
+.view-content-recent .node--view-mode-teaser .readmore-link:before,
+.view-related-content .node--view-mode-teaser .readmore-link:before {
   content: "";
   position: absolute;
   top: 0;
@@ -7244,7 +7261,9 @@ h5 {
 .view-liste-de-coup-de-coeur .node--view-mode-teaser:hover,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser:active,
 .view-content-recent .node--view-mode-teaser:hover,
-.view-content-recent .node--view-mode-teaser:active {
+.view-content-recent .node--view-mode-teaser:active,
+.view-related-content .node--view-mode-teaser:hover,
+.view-related-content .node--view-mode-teaser:active {
   box-shadow: 0 0 36px -8px var(--pink);
   transition: 0.35s ease-in-out;
 }
@@ -7254,7 +7273,9 @@ h5 {
 .view-liste-de-coup-de-coeur .node--view-mode-teaser:hover .readmore-link,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser:active .readmore-link,
 .view-content-recent .node--view-mode-teaser:hover .readmore-link,
-.view-content-recent .node--view-mode-teaser:active .readmore-link {
+.view-content-recent .node--view-mode-teaser:active .readmore-link,
+.view-related-content .node--view-mode-teaser:hover .readmore-link,
+.view-related-content .node--view-mode-teaser:active .readmore-link {
   background: linear-gradient(99deg, rgb(169, 80, 198) 0%, rgb(71, 163, 174) 100%);
   transition: 0.25s ease-in-out;
   color: var(--white);
@@ -7265,7 +7286,9 @@ h5 {
 .view-liste-de-coup-de-coeur .node--view-mode-teaser:hover .img-wrapper img,
 .view-liste-de-coup-de-coeur .node--view-mode-teaser:active .img-wrapper img,
 .view-content-recent .node--view-mode-teaser:hover .img-wrapper img,
-.view-content-recent .node--view-mode-teaser:active .img-wrapper img {
+.view-content-recent .node--view-mode-teaser:active .img-wrapper img,
+.view-related-content .node--view-mode-teaser:hover .img-wrapper img,
+.view-related-content .node--view-mode-teaser:active .img-wrapper img {
   transition: 0.35s ease-in-out;
 }
 
@@ -7409,6 +7432,7 @@ h5 {
 }
 .comment--view-mode-default .field--name-comment-author {
   margin-bottom: 0.5rem;
+  color: var(--blue-secondary);
 }
 .comment--view-mode-default .field--name-comment-post-date {
   text-align: right;
@@ -7433,6 +7457,13 @@ h5 {
   flex-direction: column;
 }
 .comment-section .js-form-item .form-label {
+  color: var(--white);
+}
+.comment-section .comment-comment-form .js-form-item {
+  margin-top: 1rem;
+}
+.comment-section .comment-comment-form .label-form {
+  margin-bottom: 0.5rem;
   color: var(--white);
 }
 .comment-section .comment-comment-form .field--name-comment-body {
@@ -7463,6 +7494,19 @@ h5 {
 .comment-section .form-actions .form-submit.button--primary {
   color: var(--white);
   background: linear-gradient(99deg, rgb(169, 80, 198) 0%, rgb(71, 163, 174) 100%) border-box;
+}
+
+.indented {
+  margin-left: 3rem;
+}
+.indented .comment--view-mode-default {
+  padding: 1rem;
+}
+.indented .comment--view-mode-default:before {
+  background-color: rgba(36, 48, 71, 0.5) !important;
+}
+.indented .comment--view-mode-default .links {
+  display: none;
 }
 
 .block-content--type-banner-block {
@@ -7652,8 +7696,16 @@ h5 {
 
 .comment-section {
   padding: 2rem;
-  border-radius: 2rem;
   background-color: var(--blue-uidark);
+}
+@media (max-width: 767.98px) {
+  .comment-section {
+    padding: 1rem;
+  }
+}
+.comment-section .card-header p {
+  font-size: var(--s3);
+  font-family: var(--font-family-heading);
 }
 
 .field--label-inline {

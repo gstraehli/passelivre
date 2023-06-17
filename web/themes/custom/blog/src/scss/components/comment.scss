@@ -1,5 +1,13 @@
 .comment-section {
   padding: 2rem;
-  border-radius: 2rem;
   background-color: var(--blue-uidark);
+  @include media-breakpoint-down(md) {
+    padding: 1rem;
+  }
+  .card-header {
+    p {
+      font-size: var(--s3);
+      font-family: var(--font-family-heading);
+    }
+  }
 }

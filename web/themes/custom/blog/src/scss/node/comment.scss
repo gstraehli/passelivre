@@ -51,6 +51,7 @@
   }
   .field--name-comment-author {
     margin-bottom: .5rem;
+    color: var(--blue-secondary);
   }
   .field--name-comment-post-date {
     text-align: right;
@@ -76,6 +77,13 @@
     }
   }
   .comment-comment-form {
+    .js-form-item {
+      margin-top: 1rem;
+    }
+    .label-form {
+      margin-bottom: .5rem;
+      color: var(--white);
+    }
 
     .field--name-comment-body {
       color: var(--black);
@@ -105,5 +113,17 @@
       }
     }
   }
+}
 
+.indented {
+  margin-left: 3rem;
+  .comment--view-mode-default {
+    padding: 1rem;
+    &:before {
+      background-color: rgb(36 48 71 / 50%)!important;
+    }
+    .links {
+      display: none;
+    }
+  }
 }
