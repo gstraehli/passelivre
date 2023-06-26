@@ -11,6 +11,11 @@
 #}
 <{{ ds_content_wrapper }}{{ attributes.addClass('ds-1col', 'clearfix') }}>
 
+  {% if not comment_author %}
+  <div class="field--name-comment-author">
+    La passe-livre
+  </div>
+  {% endif %}
   {{ ds_content }}
 
 </{{ ds_content_wrapper }}>

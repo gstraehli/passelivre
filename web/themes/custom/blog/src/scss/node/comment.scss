@@ -20,7 +20,13 @@
     }
   }
 }
-.comment--view-mode-default {
+.comment--view-mode-full {
+  &:before {
+    background-color: rgba(0,0,0,.2);
+  }
+}
+.comment--view-mode-default,
+.comment--view-mode-full {
   position: relative;
   padding: 2rem 1rem 2.5rem;
   z-index: 1;
@@ -126,4 +132,31 @@
       display: none;
     }
   }
+}
+
+// PAGE DE REPLY
+
+.comment-comment-form {
+  margin-top: 2rem;
+  .label-form {
+    color: var(--white);
+  }
+  .js-form-type-textarea {
+    color: var(--black);
+  }
+  .js-filter-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .form-actions {
+    display: flex;
+    gap: 1rem;
+    .btn-primary {
+      @extend .secondary-btn;
+    }
+  }
+}
+
+.ck-editor__editable  {
+  min-height: 10rem;
 }

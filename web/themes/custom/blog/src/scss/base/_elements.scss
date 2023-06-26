@@ -50,3 +50,17 @@ h5 {
       color: var(--white);
   }
 }
+
+.secondary-btn {
+  background-color: var(--gray-secondary);
+  color: var(--white);
+  padding: .5rem 1rem;
+  border: none;
+  appearance: none;
+  border-radius: .5rem;
+  transition: .25s ease-in-out;
+  &:hover {
+    background-color: var(--blue-secondary);
+    transition: .25s ease-in-out;
+  }
+}

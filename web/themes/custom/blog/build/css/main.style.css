@@ -6151,6 +6151,22 @@ h5 {
   color: var(--white);
 }
 
+.secondary-btn, .comment-comment-form .form-actions .btn-primary {
+  background-color: var(--gray-secondary);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.5rem;
+  transition: 0.25s ease-in-out;
+}
+.secondary-btn:hover, .comment-comment-form .form-actions .btn-primary:hover {
+  background-color: var(--blue-secondary);
+  transition: 0.25s ease-in-out;
+}
+
 .navbar .form-inline .form-actions {
   display: none;
 }
@@ -6431,6 +6447,22 @@ h5 {
   background: rgb(169, 80, 198);
   transition: 0.25s ease-in-out;
   color: var(--white);
+}
+
+.secondary-btn, .comment-comment-form .form-actions .btn-primary {
+  background-color: var(--gray-secondary);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.5rem;
+  transition: 0.25s ease-in-out;
+}
+.secondary-btn:hover, .comment-comment-form .form-actions .btn-primary:hover {
+  background-color: var(--blue-secondary);
+  transition: 0.25s ease-in-out;
 }
 
 .container {
@@ -7441,12 +7473,18 @@ h5 {
   font-size: 1.25rem;
 }
 
-.comment--view-mode-default {
+.comment--view-mode-full:before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.comment--view-mode-default,
+.comment--view-mode-full {
   position: relative;
   padding: 2rem 1rem 2.5rem;
   z-index: 1;
 }
-.comment--view-mode-default:before {
+.comment--view-mode-default:before,
+.comment--view-mode-full:before {
   content: "";
   position: absolute;
   left: 0;
@@ -7455,7 +7493,8 @@ h5 {
   height: 100%;
   z-index: -1;
 }
-.comment--view-mode-default .links {
+.comment--view-mode-default .links,
+.comment--view-mode-full .links {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -7465,17 +7504,20 @@ h5 {
   display: flex;
   gap: 0.75rem;
 }
-.comment--view-mode-default .links a {
+.comment--view-mode-default .links a,
+.comment--view-mode-full .links a {
   display: block;
   font-size: var(--small);
   color: var(--white);
   margin-bottom: 0.25rem;
 }
-.comment--view-mode-default .field--name-comment-author {
+.comment--view-mode-default .field--name-comment-author,
+.comment--view-mode-full .field--name-comment-author {
   margin-bottom: 0.5rem;
   color: var(--blue-secondary);
 }
-.comment--view-mode-default .field--name-comment-post-date {
+.comment--view-mode-default .field--name-comment-post-date,
+.comment--view-mode-full .field--name-comment-post-date {
   text-align: right;
   color: var(--blue-ui);
   font-size: var(--small);
@@ -7548,6 +7590,27 @@ h5 {
 }
 .indented .comment--view-mode-default .links {
   display: none;
+}
+
+.comment-comment-form {
+  margin-top: 2rem;
+}
+.comment-comment-form .label-form {
+  color: var(--white);
+}
+.comment-comment-form .js-form-type-textarea {
+  color: var(--black);
+}
+.comment-comment-form .js-filter-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.comment-comment-form .form-actions {
+  display: flex;
+  gap: 1rem;
+}
+.ck-editor__editable {
+  min-height: 10rem;
 }
 
 .block-content--type-banner-block {
